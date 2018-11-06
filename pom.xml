@@ -25,12 +25,6 @@
   </properties>
 
     <dependencies>
-        <!--<dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -41,59 +35,26 @@
         </dependency>
     </dependencies>
 
-  <build>
-    <!--<finalName>rest-app</finalName>-->
-    <!--<pluginManagement>-->
-      <plugins>
-        <!--<plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-        &lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>-->
-
-          <plugin>
-              <groupId>org.springframework.boot</groupId>
-              <artifactId>spring-boot-maven-plugin</artifactId>
-              <executions>
-                  <execution>
-                      <goals>
-                          <goal>build-info</goal>
-                      </goals>
-                      <configuration>
-                          <additionalProperties>
-                              <encoding.source>UTF-8</encoding.source>
-                              <encoding.reporting>UTF-8</encoding.reporting>
-                              <projectParentVersion>${project.parent.groupId}-${project.parent.artifactId}-${project.parent.version}</projectParentVersion>
-                          </additionalProperties>
-                      </configuration>
-                  </execution>
-              </executions>
-          </plugin>
-      </plugins>
-    <!--</pluginManagement>-->
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                        <configuration>
+                            <additionalProperties>
+                                <encoding.source>UTF-8</encoding.source>
+                                <encoding.reporting>UTF-8</encoding.reporting>
+                                <projectParentVersion>${project.parent.groupId}-${project.parent.artifactId}-${project.parent.version}</projectParentVersion>
+                            </additionalProperties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
